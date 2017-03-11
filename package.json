@@ -1,0 +1,21 @@
+{
+  "name": "neerc-chat",
+  "description": "Chat client with realtime task management",
+  "version": "0.1.0",
+  "author": "Dmitry Deshevoy <mityada@gmail.com>",
+  "dependencies": {
+    "stanza.io": "^8.1.1",
+    "store": "^2.0.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neerc/chat-web.git"
+  },
+  "scripts": {
+    "build": "browserify index.js > js/chat.bundle.js"
+  }
+}
