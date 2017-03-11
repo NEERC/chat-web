@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chatset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>NEERC Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">NEERC Chat</a>
+                </div>
+
+                <div class="navbar-right">
+                    <p class="navbar-text" id="status">offline</p>
+                    <button type="button" class="btn btn-default navbar-btn" id="logoutButton">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3 col-md-2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Roster</div>
+
+                        <!--div class="panel-body"-->
+                            <ul id="roster" class="list-group">
+                            </ul>
+                        <!--/div-->
+                    </div>
+                </div>
+
+                <div class="col-sm-9 col-md-10">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Chat</div>
+
+                        <div class="panel-body" id="chat">
+                        </div>
+
+                        <div class="panel-footer">
+                            <form class="form-inline" id="message">
+                                <input type="text" class="form-control" id="messageInput">
+                                <button type="submit" class="btn btn-default">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Tasks</div>
+
+                        <!--div class="panel-body"-->
+                            <ul id="tasks" class="list-group">
+                            </ul>
+                        <!--/div-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="loginDialog" tabindex="-1" role="dialog" aria-labelledby="loginDialogTitle" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="loginDialogTitle">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username" class="control-label">Username</label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="server" class="control-label">Server</label>
+                                <input type="text" class="form-control" id="server">
+                            </div>
+                            <div class="form-group">
+                                <label for="wsURL" class="control-label">WebSocket URL</label>
+                                <input type="text" class="form-control" id="wsURL">
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="remember">Remember me
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" data-loading-text="Logging in..." class="btn btn-primary" id="loginButton">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/chat.bundle.js"></script>
+    </body>
+</html>
